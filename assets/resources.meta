@@ -9,6 +9,8 @@
     "isBundle": true,
     "bundleName": "resources",
     "priority": 8,
-    "bundleConfigID": "auto_f2OmQguMZBlaOWG+QEqDYy"
+    "bundleConfigID": "auto_f2OmQguMZBlaOWG+QEqDYy",
+    "compressionType": {},
+    "isRemoteBundle": {}
   }
 }

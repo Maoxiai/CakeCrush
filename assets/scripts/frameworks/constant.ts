@@ -1,6 +1,6 @@
 export class constant {
 
-    public static GAME_NAME = 'template';
+    public static GAME_NAME = '甜蜜连萌';
 
     public static GAME_VERSION = '1.0.1';
 

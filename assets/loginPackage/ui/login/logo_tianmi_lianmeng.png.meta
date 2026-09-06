@@ -2,7 +2,7 @@
   "ver": "1.0.26",
   "importer": "image",
   "imported": true,
-  "uuid": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e",
+  "uuid": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a",
   "files": [
     ".json",
     ".png"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e@6c48a",
-      "displayName": "logoCakeCrush",
+      "uuid": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a@6c48a",
+      "displayName": "logo_tianmi_lianmeng",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -20,9 +20,9 @@
         "wrapModeT": "clamp-to-edge",
         "wrapModeS": "clamp-to-edge",
         "mipfilter": "none",
-        "imageUuidOrDatabaseUri": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e",
         "anisotropy": 0,
         "isUuid": true,
+        "imageUuidOrDatabaseUri": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a",
         "visible": false
       },
       "ver": "1.0.22",
@@ -34,8 +34,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e@f9941",
-      "displayName": "logoCakeCrush",
+      "uuid": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a@f9941",
+      "displayName": "logo_tianmi_lianmeng",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -44,18 +44,18 @@
         "trimThreshold": 1,
         "rotated": false,
         "offsetX": 0,
-        "offsetY": -4,
+        "offsetY": 0,
         "trimX": 0,
-        "trimY": 8,
-        "width": 598,
-        "height": 272,
-        "rawWidth": 598,
-        "rawHeight": 280,
+        "trimY": 0,
+        "width": 1196,
+        "height": 544,
+        "rawWidth": 1196,
+        "rawHeight": 544,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
-        "imageUuidOrDatabaseUri": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e@6c48a",
+        "imageUuidOrDatabaseUri": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a@6c48a",
         "packable": true,
         "isUuid": true,
         "atlasUuid": "",
@@ -65,17 +65,17 @@
         "meshType": 0,
         "vertices": {
           "rawPosition": [
-            -299,
-            -136,
+            -598,
+            -272,
             0,
-            299,
-            -136,
+            598,
+            -272,
             0,
-            -299,
-            136,
+            -598,
+            272,
             0,
-            299,
-            136,
+            598,
+            272,
             0
           ],
           "indexes": [
@@ -88,12 +88,12 @@
           ],
           "uv": [
             0,
-            272,
-            598,
-            272,
+            544,
+            1196,
+            544,
             0,
             0,
-            598,
+            1196,
             0
           ],
           "nuv": [
@@ -102,18 +102,18 @@
             1,
             0,
             0,
-            0.9714285714285714,
             1,
-            0.9714285714285714
+            1,
+            1
           ],
           "minPos": [
-            -299,
-            -136,
+            -598,
+            -272,
             0
           ],
           "maxPos": [
-            299,
-            136,
+            598,
+            272,
             0
           ]
         }
@@ -129,7 +129,7 @@
   "userData": {
     "type": "sprite-frame",
     "hasAlpha": true,
-    "redirect": "e748774a-5331-4cb1-a0e1-cd5a53b3a87e@f9941",
-    "fixAlphaTransparencyArtifacts": false
+    "redirect": "0bdfe7e8-8a66-4a1d-af41-74033f12e10a@f9941",
+    "fixAlphaTransparencyArtifacts": true
   }
 }

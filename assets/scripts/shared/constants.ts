@@ -1,3 +1,21 @@
+//分享场景标识（独立常量，供 SHARE_TEXT 计算属性键引用）
+const SHARE_FUNCTION = {
+    BALANCE: 'balance', //结算分享
+    PVE: 'pve', //PVE界面分享
+    START_REWARD: 'startReward', //开局奖励
+    LACK_STEP: 'lackStep', //步数不足
+    FILL_SIGN: 'fillSign', //补签分享
+    OFFLINE: 'offline', //离线奖励
+    RANK: 'rank', //排行榜
+    BUY_INFINITE: 'buyInfinite', //购买无限道具需要分享
+    LOTTERY: 'lottery', //抽奖
+    LOTTERY_REWARD: 'lotteryReward', //抽奖奖励，用于双倍分享
+    ONLINE: 'online', //在线奖励
+    SHOP_PROP: 'shopprop', //商店随机道具
+    FIGHT: 'fight', //战斗界面分享
+    SIGN: 'sign', //签到分享
+};
+
 const constants = {
     VERSION: '1.4.7',
 
@@ -53,22 +71,7 @@ const constants = {
         GROUP_RANK: 1, //群排行
     },
 
-    SHARE_FUNCTION: {
-        BALANCE: 'balance', //结算分享
-        PVE: 'pve', //PVE界面分享
-        START_REWARD: 'startReward', //开局奖励
-        LACK_STEP: 'lackStep', //步数不足
-        FILL_SIGN: 'fillSign', //补签分享
-        OFFLINE: 'offline', //离线奖励
-        RANK: 'rank', //排行榜
-        BUY_INFINITE: 'buyInfinite', //购买无限道具需要分享
-        LOTTERY: 'lottery', //抽奖
-        LOTTERY_REWARD: 'lotteryReward', //抽奖奖励，用于双倍分享
-        ONLINE: 'online', //在线奖励
-        SHOP_PROP: 'shopprop', //商店随机道具
-        FIGHT: 'fight', //战斗界面分享
-        SIGN: 'sign', //签到分享
-    },
+    SHARE_FUNCTION: SHARE_FUNCTION,
 
     //观看广告的最大次数
     WATCH_AD_MAX_TIMES: {
@@ -326,6 +329,30 @@ const constants = {
     },
 
     //次按钮在主界面显示后3秒再显示
-    NORMAL_SHOW_TIME: 0.2
+    NORMAL_SHOW_TIME: 0.2,
+
+    //微信广告位ID（需在小游戏后台开通流量主后申请，填入即可激活对应广告能力）
+    WX_AD_CONFIG: {
+        REWARD_VIDEO_ID: '',      //激励视频广告位ID
+        INTERSTITIAL_ID: '',      //插屏广告位ID
+    },
+
+    //各场景分享文案（key 对应 SHARE_FUNCTION）
+    SHARE_TEXT: {
+        [SHARE_FUNCTION.BALANCE]: { title: '我在甜蜜连萌拿了高分，快来挑战！', imageUrl: '' },
+        [SHARE_FUNCTION.PVE]: { title: '甜蜜连萌，甜甜的连线消除小游戏', imageUrl: '' },
+        [SHARE_FUNCTION.START_REWARD]: { title: '开局领奖励，快来甜蜜连萌！', imageUrl: '' },
+        [SHARE_FUNCTION.LACK_STEP]: { title: '就差一点点，帮我加把劲！', imageUrl: '' },
+        [SHARE_FUNCTION.FILL_SIGN]: { title: '帮我补个签到呗～', imageUrl: '' },
+        [SHARE_FUNCTION.OFFLINE]: { title: '离线也能领奖励，甜蜜连萌等你回来', imageUrl: '' },
+        [SHARE_FUNCTION.RANK]: { title: '排行榜见真章，敢来比比吗？', imageUrl: '' },
+        [SHARE_FUNCTION.BUY_INFINITE]: { title: '无限道具了解一下？', imageUrl: '' },
+        [SHARE_FUNCTION.LOTTERY]: { title: '大转盘转起来，好运连连！', imageUrl: '' },
+        [SHARE_FUNCTION.LOTTERY_REWARD]: { title: '抽奖奖励双倍拿，手气不错！', imageUrl: '' },
+        [SHARE_FUNCTION.ONLINE]: { title: '在线奖励白拿，快来甜蜜连萌', imageUrl: '' },
+        [SHARE_FUNCTION.SHOP_PROP]: { title: '免费道具每4小时一发，别错过', imageUrl: '' },
+        [SHARE_FUNCTION.FIGHT]: { title: '甜蜜连萌，越连越萌！', imageUrl: '' },
+        [SHARE_FUNCTION.SIGN]: { title: '今日已签到，你也来签吧', imageUrl: '' },
+    },
 };
 export { constants }

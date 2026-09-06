@@ -4,6 +4,7 @@ import { clientEvent } from './clientEvent';
 import { constants } from '../shared/constants';
 import { uiManager } from './uiManager';
 import { SceneManager } from '../ui/loading/sceneManager';
+import { wxApi } from './wxApi';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameLogic')
@@ -22,6 +23,14 @@ export class GameLogic {
 
         this._instance = new GameLogic();
         return this._instance;
+    }
+
+    /**
+     * 初始化平台能力（登录场景 onLoad 时调用一次）
+     * 绑定微信生命周期（冷启动参数/前后台切换）与右上角菜单分享
+     */
+    init() {
+        wxApi.instance.init(this);
     }
 
     onAppShow(res: any) {
@@ -139,16 +148,28 @@ export class GameLogic {
         clientEvent.dispatchEvent('newLevel');
     }
 
+    /**
+     * 展示激励视频广告
+     * @param callback 成功 callback(null)，失败 callback(err)
+     */
     showRewardAd(callback: any) {
-        callback && callback(null);
+        wxApi.instance.showRewardAd(callback);
     }
 
+    /**
+     * 展示插屏广告
+     * @param callback 成功 callback(null)，失败 callback(err)
+     */
     showInterStitialAd(callback: any) {
-        callback(null);
+        wxApi.instance.showInterstitialAd(callback);
     }
 
+    /**
+     * 发起分享
+     * @param funStr 分享场景，见 constants.SHARE_FUNCTION
+     */
     share(funStr: any, objQuery: any, callback: any, isShowConfirmAfterFailed?: any) {
-        callback();
+        wxApi.instance.share(funStr, objQuery, callback);
     }
 
     addDiamond(num: any) {
@@ -166,11 +187,19 @@ export class GameLogic {
         clientEvent.dispatchEvent('updateProp', propId);
     }
 
+    /**
+     * 获取奖励入口开启方式（看广告/分享/无）
+     * 已配置激励视频广告位时优先返回广告模式
+     */
     getOpenRewardType(funStr: any, callback: any) {
-        callback(null, constants.OPEN_REWARD_TYPE.NULL);
+        wxApi.instance.getOpenRewardType(funStr, callback);
     }
 
+    /**
+     * 数据统计上报（微信自定义分析 + 本地日志）
+     */
     customEventStatistics(eventType: any, objParams?: any) {
+        wxApi.instance.reportAnalytics(eventType, objParams);
     }
 
     requestWithPost(url: any, data: any, callback: any) {
